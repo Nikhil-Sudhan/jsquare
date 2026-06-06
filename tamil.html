@@ -10,6 +10,7 @@
     >
     <link rel="preconnect" href="https://images.unsplash.com">
     <link rel="stylesheet" href="styles.css">
+    <script async src="https://tally.so/widgets/embed.js"></script>
   </head>
   <body>
     <header class="site-header">
@@ -203,6 +204,18 @@
       </section>
 
       <section class="section contact-section" id="contact">
+        <div class="tally-form">
+          <iframe
+            data-tally-src="https://tally.so/r/lbz7Ok?transparentBackground=1"
+            width="100%"
+            height="100%"
+            frameborder="0"
+            marginheight="0"
+            marginwidth="0"
+            title="Exclusive Scan & Win Offer!"
+          ></iframe>
+        </div>
+
         <div class="contact-copy">
           <p class="eyebrow">Book Your Consultation</p>
           <h2>உங்கள் plot details பகிருங்கள். அடுத்த step-ஐ திட்டமிட உதவுகிறோம்.</h2>
@@ -217,7 +230,7 @@
           </div>
         </div>
 
-        <form class="lead-form" id="callbackForm">
+        <form class="lead-form legacy-form" id="callbackForm">
           <label>
             பெயர்
             <input type="text" name="name" placeholder="உங்கள் பெயர்" required>
@@ -250,26 +263,5 @@
       <span>Build Better. Build with clarity.</span>
     </footer>
 
-    <script>
-      const callbackForm = document.querySelector("#callbackForm");
-
-      callbackForm.addEventListener("submit", (event) => {
-        event.preventDefault();
-
-        const formData = new FormData(callbackForm);
-        const message = [
-          "New callback request for J-Square Infra",
-          "",
-          `Name: ${formData.get("name") || ""}`,
-          `Phone: ${formData.get("phone") || ""}`,
-          `Location: ${formData.get("location") || ""}`,
-          `Requirement: ${formData.get("requirement") || ""}`
-        ].join("\n");
-
-        const whatsappNumber = "919942355939";
-        const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(message)}`;
-        window.open(whatsappUrl, "_blank", "noopener,noreferrer");
-      });
-    </script>
   </body>
 </html>

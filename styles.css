@@ -312,6 +312,10 @@ h1 {
   align-items: center;
 }
 
+.contact-section {
+  align-items: start;
+}
+
 .section-copy,
 .section-heading,
 .contact-copy {
@@ -483,6 +487,24 @@ h1 {
   margin-bottom: 0;
   color: rgba(255, 255, 255, 0.62);
   font-size: 12px;
+}
+
+.legacy-form {
+  display: none;
+}
+
+.tally-form {
+  grid-column: 1 / -1;
+  min-height: 650px;
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.tally-form iframe {
+  display: block;
+  width: 100%;
+  min-height: 650px;
+  border: 0;
 }
 
 .site-footer {
@@ -702,6 +724,11 @@ h1 {
   .lead-form select {
     min-height: 46px;
     font-size: 16px;
+  }
+
+  .tally-form,
+  .tally-form iframe {
+    min-height: 720px;
   }
 
   .site-footer {
